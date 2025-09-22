@@ -1,5 +1,10 @@
-# Repo-2-Lucas-Garcia-curso-POO-Unal-
-Solución a los ejercicios propuestos por el docente
+# Reto 2 POO
+Para el segundo reto de la asignatura se pedía un diagrama UML de una situación real, representandolo en clases con sus propios atributos y métodos.
+
+En mi caso escogí el sistema de gestión de una biblioteca, el cuál es el software utilizado tanto por administradores, como personas naturales para interactuar de una u otra forma con los objetos y espacios de la biblioteca.
+***
+
+## De manera general
 
 ```mermaid
 classDiagram
@@ -13,6 +18,7 @@ classDiagram
     }
 ```
 
+## Usuarios
 ```mermaid
 classDiagram
 Usuarios <|-- Administradores
@@ -33,6 +39,7 @@ class Usuarios{
     }
 ```
 
+## Catálogo
 ```mermaid
 classDiagram
     Libro --*  Catálogo
@@ -57,6 +64,7 @@ classDiagram
     }
 ```
 
+## Préstamos
 ```mermaid
 classDiagram
 Prestamo --*  Historial
@@ -77,6 +85,7 @@ Historial --*  Sistema_de_Prestamos: ver historial()
     }
 ```
 
+## Reserva de salas
 ```mermaid
 classDiagram
 Sala --*  Sistema_de_Reservas
@@ -97,9 +106,8 @@ class Sistema_de_Reservas{
       +computador computadores
     }
 ```
-
-Finalmente, al unir todas las clases se obtiene:
-
+## En conjunto
+Finalmente, al unir todas las clases se obtiene la solución general:
 ```mermaid
 classDiagram
     Historial --*  Usuarios: ver historial()
