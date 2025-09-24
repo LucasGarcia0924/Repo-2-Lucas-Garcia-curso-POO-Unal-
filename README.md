@@ -3,7 +3,10 @@ Para el segundo reto de la asignatura se pedía un diagrama UML de una situació
 
 En mi caso escogí el sistema de gestión de una biblioteca, el cuál es el software utilizado tanto por administradores, como personas naturales para interactuar de una u otra forma con los objetos y espacios de la biblioteca.
 ***
+## Logo del grupo
+![Logo](https://github.com/NotName-K/POO-R2/blob/main/Screenshot%202025-09-23%20110719.png?raw=true)
 
+***
 ## De manera general
 
 Se crean clases menores que compongan el sistema de gestión de la biblioteca, de manera que se encarguen de cosas distintas tales como:
