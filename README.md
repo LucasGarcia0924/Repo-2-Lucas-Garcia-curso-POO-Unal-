@@ -6,6 +6,13 @@ En mi caso escogí el sistema de gestión de una biblioteca, el cuál es el soft
 
 ## De manera general
 
+Se crean clases menores que compongan el sistema de gestión de la biblioteca, de manera que se encarguen de cosas distintas tales como:
+
+- Usuarios
+- El Catálogo
+- El Sistema de Préstamos
+- El Sistema de Reservas
+
 ```mermaid
 classDiagram
     Usuarios --*  Sistema_de_Gestión_de_una_biblioteca
@@ -19,6 +26,9 @@ classDiagram
 ```
 
 ## Usuarios
+Para la clase "Usuario", se le denotan sus atributos y métodos generales, los cuáles se heredan a la clase hija "Administradores", que además de todo lo que hace el usuario general, tiene la posibilidad de editar el catálogo y recibir devoluciones.
+
+
 ```mermaid
 classDiagram
 Usuarios <|-- Administradores
@@ -40,6 +50,8 @@ class Usuarios{
 ```
 
 ## Catálogo
+
+Dentro de la clase de catálogo se denominan atributos de listas de libros y recursos online, estos provienen de clases que componen la anterior y que representan estos objetos, los cuales pueden ser prestados o descargados por acción del usuario.
 ```mermaid
 classDiagram
     Libro --*  Catálogo
@@ -63,8 +75,9 @@ classDiagram
       +descargar(usuarios)
     }
 ```
-
 ## Préstamos
+
+Clase que se encarga del sistema de préstamos, donde tambien se compone del historial que registra los préstamos pasados y que a su vez, esta compuesta de lo que denomina un "Prestamo", incluyendo libros y demás datos.
 ```mermaid
 classDiagram
 Prestamo --*  Historial
@@ -86,6 +99,9 @@ Historial --*  Sistema_de_Prestamos: ver historial()
 ```
 
 ## Reserva de salas
+
+Finalmente, la clase de "Reserva de Salas" se compone de la clase "Sala" y esta, a su vez, tiene clases hijas "Sala de estudio" y "Sala de computo".
+
 ```mermaid
 classDiagram
 Sala --*  Sistema_de_Reservas
@@ -106,6 +122,7 @@ class Sistema_de_Reservas{
       +computador computadores
     }
 ```
+
 ## En conjunto
 Finalmente, al unir todas las clases se obtiene la solución general:
 ```mermaid
